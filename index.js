@@ -24,6 +24,7 @@ console.log(adventurer.roll())
 // part 2 
 
 class Character {
+    static MAX_HEALTH = 100;
     constructor (name) {
       this.name = name;
       this.health = 100;
@@ -43,6 +44,7 @@ robin.companion.companion = new Character("Frank");
 robin.companion.companion.type = "Flea";
 robin.companion.companion.inventory = ["small hat", "sunglasses"];
 console.log(robin)
+console.log(Character.MAX_HEALTH)
 
 // part 3 - class features 
 class Adventurer extends Character {
@@ -53,6 +55,14 @@ class Adventurer extends Character {
       // Every adventurer starts with a bed and 50 gold coins.
       this.inventory.push("bedroll", "50 gold coins");
     }
+    static ROLES = ["Fighter”, “Healer”, “Wizard"]
+    // static checkRole() {
+    //     if(Character.ROLES === "Fighter” || “Healer” || “Wizard"){
+
+    //     }else {
+
+    //     }
+    // }
     // Adventurers have the ability to scout ahead of them.
     scout () {
       console.log(`${this.name} is scouting ahead...`);
@@ -69,11 +79,13 @@ class Companion extends Character {
 }
 
 let robin2 = new Adventurer("robin", "human", ["sword", "potion", "artifact"]);
-
 let leo = new Companion("leo", "cat", ["boots"]);
-
 let frank = new Companion("frank", "flea", ["small hat", "sunglasses"]);
 
 console.log(robin2, leo, frank)
+console.log(Adventurer.ROLES)
+
+// part 4
+
 
 
