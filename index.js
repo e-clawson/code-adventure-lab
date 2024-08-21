@@ -68,8 +68,14 @@ class Adventurer extends Character {
       console.log(`${this.name} is scouting ahead...`);
       super.roll();
     }
-    duel (Adventurer) {
-
+    duel (adventurer) {
+       const myRoll = this.roll();
+       const theirRoll = adventurer.roll();
+       if(myRoll > theirRoll){
+        this.health -1 
+       } else {
+        adventurer.health -1 
+       }
     }
   }
 
@@ -111,6 +117,6 @@ class AdventurerFactory {
   }
 
   const healers = new AdventurerFactory("Healer");
-  const robin = healers.generate("Robin");
+  const healerRobin = healers.generate("Robin");
 
 
