@@ -63,6 +63,7 @@ class Adventurer extends Character {
 
     //     }
     // }
+
     // Adventurers have the ability to scout ahead of them.
     scout () {
       console.log(`${this.name} is scouting ahead...`);
