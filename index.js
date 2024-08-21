@@ -72,10 +72,14 @@ class Adventurer extends Character {
        const myRoll = this.roll();
        const theirRoll = adventurer.roll();
        if(myRoll > theirRoll){
-        this.health -1 
-       } else {
         adventurer.health -1 
+       } else {
+        this.health -1 
        }
+       console.log(myRoll);
+       console.log(theirRoll);
+       console.log(adventurer.health);
+       console.log(this.health)
     }
   }
 
