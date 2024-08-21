@@ -4,7 +4,11 @@ const adventurer = {
     inventory: ["sword", "potion", "artifact"],
     companion: {
         name: "Leo",
-        type: "Cat"
+        type: "Cat",
+        companion: { 
+            name: "frank",
+            type: "flea"
+        }
     }
     }
 
