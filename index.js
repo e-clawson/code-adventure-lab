@@ -68,6 +68,9 @@ class Adventurer extends Character {
       console.log(`${this.name} is scouting ahead...`);
       super.roll();
     }
+    duel (Adventurer) {
+
+    }
   }
 
 class Companion extends Character { 
